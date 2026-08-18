@@ -26,21 +26,6 @@ npx skills add ggx071629-sys/skill-bazaar --skill project-integrity-audit
 npx skills add ggx071629-sys/skill-bazaar --skill project-integrity-audit -g -y
 ```
 
-### 手工放到 Grok
-
-用户级（所有项目）— 把 `project-integrity-audit/` 整个目录复制到：
-
-```text
-~/.grok/skills/project-integrity-audit/
-```
-
-仓库级（仅当前项目）：
-
-```text
-<repo>/.grok/skills/project-integrity-audit/
-```
-
-目录里必须有 `SKILL.md`。新开会话后可用 `grok inspect` 确认来源。
 
 ### 其他兼容路径
 
