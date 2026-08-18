@@ -1,51 +1,33 @@
-# Skill Bazaar
+# skill-bazaar
 
-Skill Bazaar 用于发现、分享、安装和管理可复用的 Agent Skills。
+这个仓库用来发现、分享、安装和管理可复用的 Agent Skills。
 
-每个技能是独立目录，可按名安装，互不耦合。本仓库是目录与分发入口，不是某一个 Skill 的说明书。
+根目录里每个文件夹是一支技能：目录名就是安装名，自带 `SKILL.md`，和其他技能互不依赖。打开这个仓库时，当前公开的是：
 
-## Skills
-
-| Skill | 简介 |
+| 目录 | 做什么 |
 | --- | --- |
-| [project-integrity-audit](./project-integrity-audit) | 证据驱动的项目完整性摸底，产出覆盖账本、finding 与 Scorecard |
+| [project-integrity-audit](./project-integrity-audit) | 对软件项目做证据驱动的完整性摸底，给出覆盖账本、finding 与 Scorecard。 |
 
-新增技能时在此表追加一行，并在仓库根增加同名目录。
-
-## Install
+从本仓库按名安装：
 
 ```bash
 npx skills add ggx071629-sys/skill-bazaar --skill <skill-name>
 ```
 
-将 `<skill-name>` 换成上表中的目录名，例如 `project-integrity-audit`。
+`<skill-name>` 换成上表目录名。装下来之后，怎么触发、怎么跑、有什么限制，以该目录里的 `SKILL.md` 为准。
 
-## Layout
+仓库现在是这样放的：
 
 ```text
-<skill-name>/
-  SKILL.md          # 必填：name、description、执行说明
-  references/       # 可选：按需加载的细则
-  scripts/          # 可选：可执行辅助脚本
+skill-bazaar/
+  README.md
+  project-integrity-audit/
+    SKILL.md
+    references/
 ```
 
-一个目录只放一个 Skill。`SKILL.md` 是唯一入口。
+以后新技能同样落在根目录，一个目录一支。必有 `SKILL.md`；细则放 `references/`，辅助命令放 `scripts/`，都按需要再加。
 
-## Catalog rules
+进这个仓库的技能要能单独安装、交给 Agent 就能执行完整任务，并且结果可核对、结论可追溯到证据。
 
-收录需同时满足：
-
-- **独立** — 单独安装即可使用，不依赖本仓库里的其他 Skill
-- **可安装** — 目录名即安装名，结构符合上表
-- **可执行** — 代理读完 `SKILL.md` 能完成一项完整任务
-- **可验证** — 有明确成功/失败标准，不把流程跑完当成结果正确
-- **可追溯** — 结论能回到证据、路径或版本，禁止无出处断言
-
-## Contribute
-
-1. 在仓库根新建 `<skill-name>/`，写入 `SKILL.md`。
-2. 按需补充 `references/` 或 `scripts/`，不要改其他 Skill 的目录。
-3. 在上方 Skills 表追加一行（链接 + 一句话简介）。
-4. 打开 Pull Request。
-
-用法、限制、域细则写在该 Skill 自己的 `SKILL.md` 里，不要写进本页。
+往这里加技能：在根目录建文件夹，补一行到上面的表，开 Pull Request。
