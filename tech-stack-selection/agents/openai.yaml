@@ -1,0 +1,4 @@
+interface:
+  display_name: "技术选型与决策记录"
+  short_description: "基于项目约束逐步确认主要技术路线，并维护已选、待定与备选决策记录"
+  default_prompt: "使用 $tech-stack-selection，根据项目约束推荐主要技术路线，解释关键取舍，并同步维护技术选型文档。"
