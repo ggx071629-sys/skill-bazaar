@@ -7,6 +7,7 @@
 | 目录 | 做什么 |
 | --- | --- |
 | [project-integrity-audit](./project-integrity-audit) | 对软件项目做证据驱动的完整性摸底，给出覆盖账本、finding 与 Scorecard。 |
+| [tech-stack-selection](./tech-stack-selection) | 收敛主要技术路线，解释取舍，并维护已选、建议、待定与备选决策记录。 |
 
 从本仓库按名安装：
 
@@ -21,6 +22,9 @@ npx skills add ggx071629-sys/skill-bazaar --skill <skill-name>
 ```text
 skill-bazaar/
   README.md
+  tech-stack-selection/
+    SKILL.md
+    agents/openai.yaml
   project-integrity-audit/
     SKILL.md
     references/
