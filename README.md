@@ -8,6 +8,7 @@
 | --- | --- |
 | [project-integrity-audit](./project-integrity-audit) | 对软件项目做证据驱动的完整性摸底，给出覆盖账本、finding 与 Scorecard。 |
 | [tech-stack-selection](./tech-stack-selection) | 收敛主要技术路线，解释取舍，并维护已选、建议、待定与备选决策记录。 |
+| [product-decision-sync](./product-decision-sync) | 同步已确认的产品决定，检查关联页面、状态、规则和文档中的连带变化。 |
 
 从本仓库按名安装：
 
@@ -22,6 +23,10 @@ npx skills add ggx071629-sys/skill-bazaar --skill <skill-name>
 ```text
 skill-bazaar/
   README.md
+  product-decision-sync/
+    SKILL.md
+    agents/openai.yaml
+    references/cases.md
   tech-stack-selection/
     SKILL.md
     agents/openai.yaml
