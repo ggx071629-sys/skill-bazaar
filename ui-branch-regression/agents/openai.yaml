@@ -1,0 +1,4 @@
+interface:
+  display_name: "真实界面操作分支回归"
+  short_description: "实际走查页面状态和操作分支，核对输入校验、取消返回与修复后的界面表现"
+  default_prompt: "使用 $ui-branch-regression，在指定环境实际走查相关页面和操作分支，记录预期与实际表现、发现的问题及未验证范围。"
