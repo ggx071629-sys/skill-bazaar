@@ -1,0 +1,4 @@
+interface:
+  display_name: "分阶段计划生成与维护"
+  short_description: "将已确认方案拆成主分计划，维护当前任务、阶段进度与完成归档，支持 Agent 接续"
+  default_prompt: "使用 $agent-phase-plans，依据已确认方案和现有计划生成或维护分阶段执行计划，同步当前任务、进度与完成归档，并保持本次授权范围。"
